@@ -5,8 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Objects</title>
+    <script>
+        //   Arrays - Collection of elements , numbered index
+            //  Objects - Collection of elements, named index. (Key - value pairs)
+
+   // const personDetails = ['Rahul','Jaiswal','Male','Mumbai','India'];
+        const personDetails = {
+            firstName : 'Rahul',
+            lastName : 'Jaiswal',
+            gender : 'Male',
+            city : 'Mumbai',
+            country : 'India'
+        }
+
+        // Access object value using keys  
+        // console.log(personDetails['gender']);
+        // console.log(personDetails.gender);
+
+        // Adding new key-value pairs
+        // personDetails.state = 'Maharastra';
+        // personDetails['state'] = 'Maharastra';
+        // console.log(personDetails);
+
+        // Edit object value using keys
+        personDetails.age = 26
+        console.log(personDetails);
+    </script>
+
+
 </head>
 <body>
-    
-</body>
+   
+    </body>
 </html>
