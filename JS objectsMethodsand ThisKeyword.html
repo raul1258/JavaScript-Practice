@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Object Methods</title>
+    <script>
+        // Standard Syntax
+        // function abc (){
+        //     console.log('abc')
+        // }
+        // abc()
+
+        // Anonymous Function   Function without name
+        // let abc = function() {
+        //     console.log('abc')
+        // }
+
+        // Self-Invoking Functions  Functions which get invoked at the time of declaration itself
+        // (function abc (){
+        //     console.log('abc')
+        // })()
+
+        // let rahul = {
+        //     firstName : 'Rahul',
+        //     lastName : 'Jaiswal',
+        //     sayHi: function () {
+        //         console.log('Hi')
+        //     }
+        // }
+        // console.log(rahul.lastName);
+        // rahul.sayHi()
+        // console.log(console.log('Hi'));
+
+
+        //exercise to join all this
+        let rahul = {
+            firstName : 'Rahul',
+            lastName : 'Jaiswal',
+            hobbies : ['Swimming', 'Cycling' ,'Jogging'],
+            displayIntroduction: function () {
+                console.log('My name is ' + this.firstName + ' ' + this.lastName + '. My Hobbies are ' + this.hobbies.join(', ') + '.')
+            }
+        }
+        
+       rahul.displayIntroduction()
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
