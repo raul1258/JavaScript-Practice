@@ -33,7 +33,7 @@ let tnCInput = document.getElementById('tnC').checked
 		document.getElementById('last-name-valid').style.display = 'none'
     }
 
-    if(emailInput.length >=4){
+    if(emailInput.length >=1 && emailInput.includes('@') && emailInput.includes('.') && emailInput.lastIndexOf('.') <= emailInput.length-3 && emailInput.lastIndexOf('@') !==0){
         document.getElementById('email-valid').style.display = 'block'
         document.getElementById('email-invalid').style.display = 'none'
     }else{
@@ -47,5 +47,19 @@ let tnCInput = document.getElementById('tnC').checked
     }else{
         document.getElementById('city-invalid').style.display = 'block'
 		document.getElementById('city-valid').style.display = 'none'
+    }
+    
+    if(zipInput.length >=3){
+        document.getElementById('zip-valid').style.display = 'block'
+		document.getElementById('zip-invalid').style.display = 'none'
+    }else{
+        document.getElementById('zip-invalid').style.display = 'block'
+		document.getElementById('zip-valid').style.display = 'none'
+    }
+
+    if(tnCInput == true){
+        document.getElementById('valid-tnC').style.display = 'none'
+    }else{
+        document.getElementById('valid-tnC').style.display = 'block'
     }
 }
