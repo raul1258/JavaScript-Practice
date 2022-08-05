@@ -33,6 +33,19 @@ let tnCInput = document.getElementById('tnC').checked
 		document.getElementById('last-name-valid').style.display = 'none'
     }
 
+    /* Email
+	- Whether exists? - Done
+	- @ - Done
+	- . - Done
+	- After last ., there should be atleast 2 characters - Done
+	- First character cannot be @ - Done
+	*/
+
+	// Eg: ankit@gmail.com
+	// Index of .: 11
+	// Length of string: 15
+
+
     if(emailInput.length >=1 && emailInput.includes('@') && emailInput.includes('.') && emailInput.lastIndexOf('.') <= emailInput.length-3 && emailInput.lastIndexOf('@') !==0){
         document.getElementById('email-valid').style.display = 'block'
         document.getElementById('email-invalid').style.display = 'none'
