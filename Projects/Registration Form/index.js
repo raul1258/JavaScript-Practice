@@ -67,7 +67,7 @@ let tnCInput = document.getElementById('tnC').checked
         error = true
     }
     
-    if(zipInput.length === 6 && !isNaN(parseInt(zipInput))){  //important isNaN  (parseInt(zipInput)) we can use this
+    if(zipInput.length === 6 && (parseInt(zipInput))){  //important isNaN  (parseInt(zipInput)) we can use this
         document.getElementById('zip-valid').style.display = 'block'
 		document.getElementById('zip-invalid').style.display = 'none'
     }else{
@@ -95,7 +95,7 @@ let tnCInput = document.getElementById('tnC').checked
         document.getElementById('valid-tnC').style.display = 'block'
         error = true
     }
-
+console.log(error)
     if(!error) {
 		alert('Your details have been saved successfully!')
 		document.getElementById('first-name').value = ''
