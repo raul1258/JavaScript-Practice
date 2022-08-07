@@ -1,6 +1,10 @@
 function validate() {
 	let firstNameInput = document.getElementById('first-name').value
 	let lastNameInput = document.getElementById('last-name').value
+	let genderInput = document.getElementById('gender').value
+	let dobInput = document.getElementById('dob').value
+	let guardianInput = document.getElementById('guardian-name').value
+	let phnoInput = document.getElementById('phno').value
 	let emailInput = document.getElementById('email').value
 	let cityInput = document.getElementById('city').value
 	let stateInput = document.getElementById('state').value
@@ -27,13 +31,34 @@ function validate() {
 		error = true
 	}
 
-	if (
-    emailInput &&
-    emailInput.includes("@") &&
-    emailInput.includes(".") &&
-    emailInput.lastIndexOf(".") <= emailInput.length - 3 &&
-		emailInput.indexOf('@') !== 0
-  ) {
+	if(genderInput !== 'None'){
+		document.getElementById('gender-valid').style.display = "block";
+		document.getElementById('gender-invalid').style.display = "none";
+	} else {
+		document.getElementById('gender-invalid').style.display = "block";
+		document.getElementById('gender-valid').style.display = "none";
+		error = true
+	}
+
+	if(guardianInput){
+		document.getElementById('guardian-name-valid').style.display = 'block'
+		document.getElementById('guardian-name-invalid').style.display = 'none'
+	} else {
+		document.getElementById('guardian-name-invalid').style.display = 'block'
+		document.getElementById('guardian-name-valid').style.display = 'none'
+		error = true
+	}
+	 
+	if(phnoInput && phnoInput.length === 10 && parseInt(phnoInput)){
+		document.getElementById("phno-valid").style.display = "block";
+		document.getElementById("phno-invalid").style.display = "none";
+	} else {
+		document.getElementById("phno-invalid").style.display = "block";
+		document.getElementById("phno-valid").style.display = "none";
+		error = true
+	}
+
+	if (emailInput && emailInput.includes("@") && emailInput.includes(".") && emailInput.lastIndexOf(".") <= emailInput.length - 3 && emailInput.indexOf('@') !== 0 ) {
     document.getElementById("email-valid").style.display = "block";
     document.getElementById("email-invalid").style.display = "none";
   } else {

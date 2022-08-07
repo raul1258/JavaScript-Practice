@@ -1,5 +1,16 @@
+body{
+	background-image: url(./images/bgimg1.jpg);
+	/* background-size:100vw; */
+	background-repeat: no-repeat;
+}
+
 .container {
+	background-color: white;
 	margin-top: 30px;
+	border-radius: 5px 5px;
+	/* opacity: .8; */
+	max-width: fit-content;
+	min-width: fit-content;
 }
 
 .registration-form {
@@ -14,6 +25,7 @@
 .submit-btn {
 	text-align: center;
 }
+
 
 /* .valid-feedback{
     display: block;

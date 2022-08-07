@@ -13,7 +13,7 @@
     <div class="container">
       <h1 class="display-3 title">Registration Form</h1>
       <form class="row g-3 registration-form">
-        <div class="col-md-4">
+        <div class="col-md-6">
           <label for="first-name" class="form-label">First name</label>
           <input type="text" class="form-control" id="first-name" autocomplete="off">
           <div class="valid-feedback" id="first-name-valid">
@@ -23,7 +23,7 @@
             Please enter a valid first name.
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-6">
           <label for="last-name" class="form-label">Last name</label>
           <input type="text" class="form-control" id="last-name" autocomplete="off">
           <div class="valid-feedback" id="last-name-valid">
@@ -33,7 +33,57 @@
             Please enter a valid last name.
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-6">
+          <label for="gender" class="form-label">Gender</label>
+          <select class="form-select" id="gender">
+            <option value="None" selected>Select Gender ...</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Decline to Answer</option>
+          </select>  
+          <div class="valid-feedback" id="gender-valid">
+            Looks good!
+          </div>
+          <div class="invalid-feedback" id="gender-invalid">
+            Please Select a Gender.
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="dateofbirth" class="form-label">D.O.B</label>
+          <div class="input-group has-validation">
+            <input type="date" class="form-control" id="dob" aria-describedby="inputGroupPrepend" autocomplete="off">
+            <div class="valid-feedback" id="dob-valid">
+              Looks good!
+            </div>
+            <div class="invalid-feedback" id="dob-invalid">
+              Please enter a valid Date of Birth.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="first-name" class="form-label">Guardian's name</label>
+          <input type="text" class="form-control" id="guardian-name" autocomplete="off">
+          <div class="valid-feedback" id="guardian-name-valid">
+            Looks good!
+          </div>
+          <div class="invalid-feedback" id="guardian-name-invalid">
+            Please enter a valid Guardian name.
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="phno" class="form-label">Phone Number</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">+91</span>
+            <input type="text" class="form-control" id="phno" aria-describedby="inputGroupPrepend" autocomplete="off" maxlength="10">
+            <div class="valid-feedback" id="phno-valid">
+              Looks good!
+            </div>
+            <div class="invalid-feedback" id="phno-invalid">
+              Please enter a valid Phone Number.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
           <label for="email" class="form-label">Email</label>
           <div class="input-group has-validation">
             <span class="input-group-text" id="inputGroupPrepend">@</span>
@@ -56,7 +106,7 @@
             Please provide a valid city.
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-6">
           <label for="state" class="form-label">State</label>
           <select class="form-select" id="state">
             <option value="None" selected>Select state ...</option>
@@ -104,9 +154,9 @@
             Please select a valid state.
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-6">
           <label for="zip" class="form-label">Zip</label>
-          <input type="text" class="form-control" id="zip" autocomplete="off">
+          <input type="text" class="form-control" id="zip" autocomplete="off" maxlength="6">
           <div class="valid-feedback" id="zip-valid">
             Looks good!
           </div>
