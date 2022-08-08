@@ -110,6 +110,10 @@ function validate() {
 		document.getElementById('state').value = 'None'
 		document.getElementById('zip').value = ''
 		document.getElementById('tnC').checked = false
+		document.getElementById('gender').value =''
+		document.getElementById('dob').value = ''
+		document.getElementById('guardian-name').value = ''
+		document.getElementById('phno').value = ''
 
 		document.getElementById('first-name-valid').style.display = 'none'
 		document.getElementById('last-name-valid').style.display = 'none'
@@ -117,6 +121,10 @@ function validate() {
 		document.getElementById("city-valid").style.display = "none";
 		document.getElementById("zip-valid").style.display = "none";
 		document.getElementById('state-valid').style.display = "none";
+		document.getElementById('gender-valid').style.display = "none";
+		document.getElementById('guardian-name-valid').style.display = 'none';
+		document.getElementById("phno-valid").style.display = "none";
+
 	}
 }
 

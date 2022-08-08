@@ -11,6 +11,7 @@ body{
 	/* opacity: .8; */
 	max-width: fit-content;
 	min-width: fit-content;
+	box-shadow: 0 4px 8px 0 rgba(158, 219, 138, 0.2), 0 6px 20px 0 rgba(188, 38, 38, 0.19);
 }
 
 .registration-form {
