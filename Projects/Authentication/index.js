@@ -46,7 +46,39 @@ let encryptionRule = {
   
 	  let signupSuccessAlert = document.getElementById('signup-alert-success')
 	  // let signupFailureAlert = document.getElementById('signup-alert-failure') - Validation failure
+
+	  if(firstName){
+		document.getElementById('first-name-valid').style.display = "block"
+		document.getElementById('first-name-invalid').style.display = "none"
+	  }else{
+		document.getElementById('first-name-valid').style.display = "none"
+		document.getElementById('first-name-invalid').style.display = "block"
+	  }
   
+	  if(lastName){
+		document.getElementById('last-name-valid').style.display = "block"
+		document.getElementById('last-name-invalid').style.display = "none"
+	  }else{
+		document.getElementById('last-name-valid').style.display = "none"
+		document.getElementById('last-name-invalid').style.display = "block"
+	  }
+	  
+	  if (email && email.includes("@") && email.includes(".") && email.lastIndexOf(".") <= email.length - 3 && email.indexOf('@') !== 0 ) {
+		document.getElementById("email-valid").style.display = "block";
+		document.getElementById("email-invalid").style.display = "none";
+	  } else {
+		document.getElementById("email-invalid").style.display = "block";
+		document.getElementById("email-valid").style.display = "none";
+	  }
+
+	  if(phone && phone.length === 10 && parseInt(phone)){
+		document.getElementById("phone-valid").style.display = "block";
+		document.getElementById("phone-invalid").style.display = "none";
+		} else {
+		document.getElementById("phone-invalid").style.display = "block";
+		document.getElementById("phone-valid").style.display = "none";
+		}
+		console.log(phone)
 	  let userDetails = {
 		  firstName,
 		  lastName,
@@ -60,7 +92,9 @@ let encryptionRule = {
   
 	  console.log(DB_USERS)
   
-	  resetSignupFields()
+	  //resetSignupFields()
+
+
   }
   
   const login = () => {

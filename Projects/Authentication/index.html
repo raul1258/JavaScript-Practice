@@ -68,15 +68,21 @@
 			<div class="col-md-6">
 				<label for="signup-first-name" class="form-label">First name</label>
 				<input type="text" class="form-control" id="signup-first-name" required autocomplete="off">
-				<div class="valid-feedback">
+				<div class="valid-feedback" id="first-name-valid">
 					Looks good!
+				</div>
+				<div class="invalid-feedback " id="first-name-invalid">
+					Please enter valid first name!
 				</div>
 			</div>
 			<div class="col-md-6">
 				<label for="signup-last-name" class="form-label">Last name</label>
 				<input type="text" class="form-control" id="signup-last-name" required autocomplete="off">
-				<div class="valid-feedback">
+				<div class="valid-feedback" id="last-name-valid">
 					Looks good!
+				</div>
+				<div class="invalid-feedback" id="last-name-invalid">
+					Please enter valid last name! 
 				</div>
 			</div>
 			<div class="col-md-6">
@@ -87,7 +93,10 @@
 					</div>
 					<input type="text" class="form-control" id="signup-email" aria-describedby="inputGroupPrepend"
 						required autocomplete="off">
-					<div class="invalid-feedback">
+						<div class="valid-feedback" id="email-valid">
+							Looks good!
+						</div>
+					<div class="invalid-feedback" id="email-invalid">
 						Please enter a valid email.
 					</div>
 				</div>
@@ -99,8 +108,11 @@
 						<span class="input-group-text" id="inputGroupPrepend">+91</span>
 					</div>
 					<input type="text" class="form-control" id="signup-phone" aria-describedby="inputGroupPrepend"
-						required autocomplete="off">
-					<div class="invalid-feedback">
+						required autocomplete="off" maxlength="10">
+						<div class="valid-feedback" id="phone-valid">
+							Looks good!
+						</div>
+						<div class="invalid-feedback" id="phone-invalid">
 						Please enter a valid phone number.
 					</div>
 				</div>

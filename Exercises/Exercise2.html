@@ -38,8 +38,12 @@ let students =
       ]
 
 			// Q - Return array of only those students who like ice cream
+      let filteredArr = students.filter((object) => {
+       if (object.likesIcecream == true) return object;
+      })
 
-       console.log(students)
+      console.log(filteredArr);
+
 </script>
 </body>
 </html>
