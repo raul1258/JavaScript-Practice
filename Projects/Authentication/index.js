@@ -43,6 +43,10 @@ let encryptionRule = {
 	  let phone = document.getElementById('signup-phone').value
 	  let email = document.getElementById('signup-email').value
 	  let password = document.getElementById('signup-password').value
+	  let confirmPassword = document.getElementById('signup-confirm-password').value
+	  let tnCInput = document.getElementById('tnC').checked
+
+	  
   
 	  let signupSuccessAlert = document.getElementById('signup-alert-success')
 	  // let signupFailureAlert = document.getElementById('signup-alert-failure') - Validation failure
@@ -78,7 +82,23 @@ let encryptionRule = {
 		document.getElementById("phone-invalid").style.display = "block";
 		document.getElementById("phone-valid").style.display = "none";
 		}
-		console.log(phone)
+		
+		if(confirmPassword && password === confirmPassword){
+			document.getElementById('valid-confirmpassword').style.display = "block"
+			document.getElementById('invalid-confirmpassword').style.display = "none"
+		}else{
+			document.getElementById('valid-confirmpassword').style.display = "none"
+			document.getElementById('invalid-confirmpassword').style.display = "block"
+		}
+
+		if(tnCInput) {
+			document.getElementById("tnC-invalid").style.display = "none";
+		} else {
+			document.getElementById("tnC-invalid").style.display = "block";
+			error = true
+		}
+
+
 	  let userDetails = {
 		  firstName,
 		  lastName,
@@ -92,7 +112,7 @@ let encryptionRule = {
   
 	  console.log(DB_USERS)
   
-	  //resetSignupFields()
+	  resetSignupFields()
 
 
   }
@@ -122,4 +142,4 @@ let encryptionRule = {
 		  2 steps:
 		  1. Check whether the email (user) exits in the DB.
 		  2. Whether entered password matches with saved password for that user.
-  */
+   */

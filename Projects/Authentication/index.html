@@ -8,6 +8,7 @@
 	<title>Authentication</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
 		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="style.css">
 </head>
 
@@ -119,29 +120,38 @@
 			</div>
 			<div class="col-md-6">
 				<label for="signup-password" class="form-label">Password</label>
-				<input type="password" class="form-control" id="signup-password" required autocomplete="off">
+				<input type="password" class="form-control" id="signup-password" required autocomplete="off" maxlength="20">
+				<button type="button" id="btnToggle" class="toggle">
+				<i class="fa-solid fa-eye fa-1.5x"></i>
+				</button>
 				<div class="invalid-feedback">
 					Please provide a valid password.
 				</div>
 			</div>
 			<div class="col-md-6">
 				<label for="signup-confirm-password" class="form-label">Confirm Password</label>
-				<input type="password" class="form-control" id="signup-confirm-password" required autocomplete="off">
-				<div class="invalid-feedback">
+				<input type="password" class="form-control" id="signup-confirm-password" required autocomplete="off" maxlength="20">
+				<button type="button" id="btnToggle" class="toggle">
+					<i id="eyeIcon" class="fa-solid fa-eye fa-1.5x"></i>
+				</button>
+				<div class="valid-feedback" id="valid-confirmpassword">
+					Password Matches!
+				</div>
+				<div class="invalid-feedback" id="invalid-confirmpassword">
 					Password and confirm password do not match.
 				</div>
 			</div>
 			<div class="col-12">
 				<div class="form-check">
-					<input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-					<label class="form-check-label" for="invalidCheck">
-						Agree to terms and conditions
-					</label>
-					<div class="invalid-feedback">
-						You must agree before submitting.
-					</div>
+				  <input class="form-check-input" type="checkbox" value="" id="tnC">
+				  <label class="form-check-label" for="tnC">
+					Agree to terms and conditions
+				  </label>
+				  <div class="invalid-feedback" id="tnC-invalid">
+					You must agree before submitting.
+				  </div>
 				</div>
-			</div>
+			  </div>
 			<div class="col-12 button-wrapper">
 				<button class="btn btn-dark" type="button" onclick="signup()">Sign Up</button>
 			</div>

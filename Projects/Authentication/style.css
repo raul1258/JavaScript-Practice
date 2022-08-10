@@ -27,3 +27,14 @@
 .login-alert {
 	width: 75%;
 }
+
+.toggle{
+	background: none;
+	border: none;
+	font-weight: 600;
+	position: absolute;
+	right: 2rem;
+	top: 2.5rem;
+	z-index: .9;
+	cursor: pointer;
+}
