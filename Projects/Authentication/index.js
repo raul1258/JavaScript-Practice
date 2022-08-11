@@ -20,6 +20,25 @@ let encryptionRule = {
 	'_': '~', '#': '!', '%': '$', '+': '&',
 	'@': '-', '~': '_'
   }
+
+  const encrypt = (inputPassword) => {
+	let encryptedPassword = ''
+	for(char of inputPassword) {
+		encryptedPassword = encryptedPassword + encryptionRule[char]
+	}
+	return encryptedPassword
+}
+
+const decrypt = (encryptedPassword) => {
+	let actualPassword = ''
+	let keys = Object.keys(encryptionRule)
+	let values = Object.values(encryptionRule)
+	for(char of encryptedPassword) {
+		let requiredIndex = values.findIndex(value => value === char)
+		actualPassword = actualPassword + keys[requiredIndex]
+	}
+	return actualPassword
+}
   
   const DB_USERS = []
   
@@ -103,7 +122,7 @@ let encryptionRule = {
 		  firstName,
 		  lastName,
 		  email,
-		  password,
+		  password : encrypt(password),
 		  phone
 	  }
   
@@ -136,6 +155,19 @@ let encryptionRule = {
 	  resetLoginFields()
   }
   
+  		const toggle = document.getElementById('btnToggle'),
+  				password = document.getElementById('signup-password'),
+				icon = document.getElementById('eyeIcon');
+    	toggle.addEventListener("click", () => {
+			if(password.type === "password"){
+				password.type = 'text';
+				icon.classList.add("fa-eye-slash")
+			}else{
+				password.type = 'password';
+				icon.classList.remove("fa-eye-slash")
+			}
+	})
+
   /*
 		  find() -> Return a condition to find the element; If value exists, returns the value; else, returns undefined
   

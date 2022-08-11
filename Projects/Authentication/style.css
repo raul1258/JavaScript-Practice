@@ -38,3 +38,6 @@
 	z-index: .9;
 	cursor: pointer;
 }
+#btnToggle{
+	outline: none;
+}
