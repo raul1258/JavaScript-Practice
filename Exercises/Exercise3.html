@@ -66,10 +66,20 @@
 			- batch
 			- average marks secured
 		*/
-      let updatedarray = student(marks).map(function(element){
-        return element/5;
+      let studentDetails = students.map(student => {
+        let marksArray = Object.values(student.marks)
+        let sumofMarks = 0
+        marksArray.forEach(marks => {
+          sumofMarks = sumofMarks + marks
+        });
+        let averageMarks = sumofMarks / marksArray.length
+        return {
+          name : student.name,
+          batch : student.batch,
+          averageMarks : averageMarks
+        }
       })
-      console.log(updatedarray)
+      console.log(studentDetails)
     </script>
 </body>
 </html>
