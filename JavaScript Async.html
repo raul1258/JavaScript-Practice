@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+Callback
+<div id="root"></div>
+<script>
+
+    function displaySth(data){
+        document.getElementById("root").innerHTML = data;
+    }
+
+    function mySum(num1,num2,myCallback){
+        let sum = num1+num2;
+        myCallback(sum);
+    }
+
+
+
+    // mySum(5,6,displaySth)
+
+    function displayTime(){
+        const dt = new Date();
+
+        const hh = dt.getHours().toString().padStart(2,'0');
+        const min = dt.getMinutes().toString().padStart(2,'0');
+        const sec = dt.getSeconds().toString().padStart(2,'0');
+        const ms = dt.getMilliseconds().toString().padStart(3,'0');
+
+        // document.getElementById("root").innerHTML = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds()
+        document.getElementById("root").innerHTML = `${hh}:${min}:${sec}:${ms}`
+        
+        setTimeout(displayTime,1);
+    }
+
+    let str = "rohandutt";
+
+    let output = str.padEnd(8,'a')
+    console.log(output)
+
+
+    displayTime()
+
+    // setInterval(displayTime,1)
+
+
+
+    // We created a clock using set interval
+    // Can we create a clock using set timeout, if yes how?
+</script>
+</body>
+
+</html>

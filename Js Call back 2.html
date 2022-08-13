@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Revision</title>
+</head>
+<body>
+    Callback
+    <div id="root"></div>
+    <script>
+
+        function displaySth(data){
+            document.getElementById("root").innerHTML = data;
+        }
+        function first(){
+            displaySth("first")
+        }
+
+        function second(){
+            displaySth("second")
+        }
+
+        const printTemp = () => {
+            const x = 5;
+            return x;
+        }
+        console.log(printTemp)
+        console.log(printTemp())
+        
+        // Correct way 1
+        // setTimeout(()=>second(),5000)
+
+        // Correct way 2
+        // setTimeout(second,5000)
+
+        // Incorrect way
+        // setTimeout(second(),5000)
+
+
+        // second();
+        // first();
+
+
+        function calcSum(num1,num2){
+            let sum = num1+num2;
+            return sum;
+        }
+
+        // let result = calcSum(5,5)
+        // displaySth(result)
+        // problem is - need to call 2 func to show the result
+
+        function calcSum2(num1,num2){
+            let sum = num1+num2;
+            displaySth(sum);
+            // return sum;
+
+            // problem is - i cannot stop this func from displaying the result
+        }
+        calcSum2(5,5)
+
+        function mySum3(num1,num2,myCallback){
+            let sum = num1+num2;
+            if(sum<10){
+
+            }else{
+                myCallback(sum);
+            }
+        }
+        function displaySthInStyle(data){
+            document.getElementById("root").innerHTML = `<h2>${data}</h2>`;
+        }
+
+        // mySum3(5,6,displaySth)
+        mySum3(5,6,displaySthInStyle)
+    </script>
+
+</body>
+</html>
