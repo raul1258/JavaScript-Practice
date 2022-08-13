@@ -32,10 +32,10 @@
 				</ul>
 				<ul class="navbar-nav my-2 my-lg-0 navbar-nav-scroll">
 					<li class="nav-item">
-						<a class="nav-link" aria-current="page" href="#signup-form">Sign Up</a>
+						<a class="nav-link" aria-current="page" id="register-button">Sign Up</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" aria-current="page" href="#login-form">Login</a>
+						<a class="nav-link" aria-current="page" id="login-button">Login</a>
 					</li>
 				</ul>
 			</div>
@@ -52,7 +52,7 @@
 
 	<div class="container">
 		<!-- ----------------------------- Sign Up Form ----------------------------- -->
-		<form class="row g-3 registration-form" id="signup-form">
+		<form class="row g-3 registration-form" id="registration">
 			<h1 class="col-md-12 display-4 sign-up-title">Sign Up</h1>
 			<div class="alert alert-success alert-dismissible fade show signup-alert col-md-8" role="alert" id="signup-alert-success">
 				Signed up successfully!
@@ -158,35 +158,35 @@
 		</form>
 
 		<!-- -----------------------------  Login Form ----------------------------- -->
-		<form class="login-form" id="login-form">
-			<h1 class="display-4 login-title">Login</h1>
-			<div class="alert alert-success alert-dismissible fade show login-alert" role="alert" id="login-alert-success">
-				Access granted!
-				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-			</div>
-			<div class="alert alert-danger alert-dismissible fade show login-alert" role="alert" id="login-alert-failure">
-				Access denied!
-				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-			</div>
-			<div class="mb-3">
-				<label for="login-email" class="form-label">Email address</label>
-				<input type="email" class="form-control" id="login-email" aria-describedby="emailHelp">
-				<div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-			</div>
-			<div class="mb-3">
-				<label for="login-password" class="form-label">Password</label>
-				<input type="password" class="form-control" id="login-password" maxlength="20">
-				
-			</div>
-			<div class="button-wrapper">
-				<button type="button" class="btn btn-dark" onclick="login()">Log In</button>
-			</div>
-		</form>
-	</div>
+			<form class="login-form" id="login1">
+				<h1 class="display-4 login-title">Login</h1>
+				<div class="alert alert-success alert-dismissible fade show login-alert" role="alert" id="login-alert-success">
+					Access granted!
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="alert alert-danger alert-dismissible fade show login-alert" role="alert" id="login-alert-failure">
+					Access denied!
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="mb-3">
+					<label for="login-email" class="form-label">Email address</label>
+					<input type="email" class="form-control" id="login-email" aria-describedby="emailHelp">
+					<div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+				</div>
+				<div class="mb-3">
+					<label for="login-password" class="form-label">Password</label>
+					<input type="password" class="form-control" id="login-password" maxlength="20">
+					
+				</div>
+				<div class="button-wrapper">
+					<button type="button" class="btn btn-dark" onclick="login()">Log In</button>
+				</div>
+			</form>
+</div>
 
 	<!-- ----------------------------- Footer Image ----------------------------- -->
 	<img src="https://i.pinimg.com/736x/1c/e3/dc/1ce3dc9938260cd96d5f8feb73aa3c2f.jpg" alt="footer-image" width="100%">

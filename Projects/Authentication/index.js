@@ -39,6 +39,21 @@ const decrypt = (encryptedPassword) => {
 	}
 	return actualPassword
 }
+{
+    document.getElementById('register-button').addEventListener('click', () => {
+	// alert()
+    registration.style.display = "block";
+    login1.style.display = "none";
+
+})
+
+document.getElementById('login-button').addEventListener('click', () => {
+	// alert()
+    registration.style.display = "none";
+    login1.style.display = "block";
+
+})
+}
   
   const DB_USERS = []
   
@@ -67,7 +82,7 @@ const decrypt = (encryptedPassword) => {
 
 	  let error = false
 
-	  console.log(password)
+	//   console.log(password)
   
 	  let signupSuccessAlert = document.getElementById('signup-alert-success')
 	 //let signupFailureAlert = document.getElementById('signup-alert-failure')  //Validation failure
@@ -156,7 +171,7 @@ const decrypt = (encryptedPassword) => {
 	  DB_USERS.push(userDetails)
 	  
   
-	  console.log(DB_USERS)
+	//   console.log(DB_USERS)
   
 	//   resetSignupFields()
 
