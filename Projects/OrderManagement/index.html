@@ -13,7 +13,7 @@
 
 <body>
 	<div class="container">
-		<h1 class="display-2 main-title">Max's Pizza!</h1>
+		<h1 class="display-2 main-title" >Max's Pizza!</h1>
 		<div class="input-group mb-3 order-search">
 			<input type="text" class="form-control" placeholder="Enter Order ID" aria-describedby="button-addon2"
 				id="order-id-input">
@@ -21,8 +21,8 @@
 				onclick="executeOrder()">Execute</button>
 		</div>
 		<div class="order-status-wrapper">
-			<h3 class="main-title">Order Status for ID: MP202200001</h3>
-			<button type="button" class="btn btn-light btn-lg order-status-block">Order placed</button>
+			<h3 class="main-title" id="order-id-display">Order Status for ID: MP202200001</h3>
+			<button type="button" class="btn btn-light btn-lg order-status-block orderPlaced">Order placed</button>
 			<button type="button" class="btn btn-light btn-lg order-status-block">Chef received the order and started
 				preparing</button>
 			<button type="button" class="btn btn-light btn-lg order-status-block">Pizza Sauce added</button>
