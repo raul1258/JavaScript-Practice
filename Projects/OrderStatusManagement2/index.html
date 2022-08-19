@@ -12,11 +12,11 @@
 <body>
     <div class="container">
 		<h1 class="display-2 main-title">Max's Pizza</h1>
-		<div class="input-group mb-3 order-id-input">
-			<input type="text" class="form-control" placeholder="Enter Order ID" aria-describedby="button-addon2">
-			<button class="btn btn-outline-secondary" type="button" id="button-addon2">Execute</button>
+		<div class="input-group mb-3 order-id-input-wrapper">
+			<input type="text" class="form-control" placeholder="Enter Order ID" aria-describedby="button-addon2" id="order-id-input">
+			<button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="executeOrder()">Execute</button>
 		</div>
-		<div class="row">
+		<div class="row" id="order-cards-wrapper">
 			<div class="col-md-3 order-status-card">
 				<div class="card text-center">
 					<div class="card-header">
@@ -28,7 +28,7 @@
 						<p class="card-text">
 							<span class="badge rounded-pill bg-success">First layer of cheeze added</span>
 						</p>
-						<a href="#" class="btn btn-danger btn-sm">Cancel</a>
+						<!-- <a href="#" class="btn btn-danger btn-sm">Cancel</a> -->
 					</div>
 					<div class="card-footer">
 						18-08-2022 10:24 PM
