@@ -1,7 +1,12 @@
 .main-title {
 	text-align: center;
 }
-
+body{
+	background: url(./images/bg-1.jpg);
+	/* background-repeat: no-repeat; */
+	background-repeat: repeat-y;
+	background-size: 100vw;
+}
 .order-id-input-wrapper {
 	width: 500px;
 	margin: 25px auto;
@@ -14,7 +19,13 @@
 .order-status-card .card {
 	border-radius: 20px;
 }
-
+/* .input-group{
+	width: auto;
+} */
+/* .navbar{
+	width:max-content;
+	/* background: transparent; */
+/* } */
 .order-status-card .card-header{
 	background: #006491;
   color: white;
