@@ -1,3 +1,9 @@
+body{
+	background: url(./images/background.jpg.crdownload);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
 .container {
 	margin: 20px auto;
 }
@@ -5,6 +11,7 @@
 .main-title {
 	text-align: center;
 	margin-bottom: 20px;
+	background-color: aquamarine;
 }
 
 .order-search {
