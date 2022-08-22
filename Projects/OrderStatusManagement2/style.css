@@ -19,13 +19,6 @@ body{
 .order-status-card .card {
 	border-radius: 20px;
 }
-/* .input-group{
-	width: auto;
-} */
-/* .navbar{
-	width:max-content;
-	/* background: transparent; */
-/* } */
 .order-status-card .card-header{
 	background: #006491;
   color: white;
@@ -44,4 +37,20 @@ body{
 
 .order-status-card .rounded-pill {
 	font-size: 1em;
+}
+
+@media only screen and (max-width: 515px) {
+.input-group{
+	width: auto;
+}
+ .navbar{
+	width:auto;
+	/* background: transparent;  */
+ }
+}
+
+@media only screen and (max-width: 321px) {
+.navbar{
+	width: max-content;
+}
 }
