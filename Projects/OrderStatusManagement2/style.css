@@ -21,8 +21,10 @@ body{
 }
 .order-status-card .card-header{
 	background: #006491;
-  color: white;
+  	color: white;
 	border-radius: 20px 20px 0 0;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .order-status-card .card-footer{
@@ -38,6 +40,11 @@ body{
 .order-status-card .rounded-pill {
 	font-size: 1em;
 }
+.cancel-btn:hover{
+	cursor: pointer;
+}
+
+
 
 @media only screen and (max-width: 515px) {
 .input-group{
