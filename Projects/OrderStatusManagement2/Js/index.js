@@ -4,13 +4,17 @@ let currentOrderNumber = 1
 const executeOrder = () => {
 	let orderId = createOrderId()
 
+	if(currentOrderNumber === 1)
+		document.getElementById('empty-order').style.display = 'none'
+	
+
 	let item1 = document.getElementById('item-1').value
 	let price1 = document.getElementById('price-1').value
 	let item2 = document.getElementById('item-2').value
 	let price2 = document.getElementById('price-2').value
 	let item3 = document.getElementById('item-3').value
 	let price3 = document.getElementById('price-3').value
-
+	
 	resetFields()
 
 	let billDetails = [
@@ -29,6 +33,8 @@ const executeOrder = () => {
 	]
 
 	createOrderCard(orderId, billDetails)
+	
+	
 
 	currentOrderNumber++
 

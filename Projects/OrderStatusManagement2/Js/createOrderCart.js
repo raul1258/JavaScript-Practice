@@ -1,3 +1,5 @@
+let numberOfOrder = 0
+
 const createOrderCard = (orderId, billDetails) => {
 	let orderCardsWrapper = document.getElementById('order-cards-wrapper')
 
@@ -47,7 +49,14 @@ const createOrderCard = (orderId, billDetails) => {
 	cancelBtn.addEventListener('click', () => {
 		// orderCardsWrapper.removeChild(colDiv)
 		colDiv.style.display = 'none'
+		numberOfOrder--;
+
+		if(numberOfOrder === 0){
+			document.getElementById('empty-order').style.display = 'block'
+		}
 	})
+
+	numberOfOrder++
 }
 
 {/* <div class="col-md-3 order-status-card">
