@@ -32,6 +32,7 @@ const executeOrder = () => {
 		}
 	]
 
+
 	createOrderCard(orderId, billDetails)
 	
 	
