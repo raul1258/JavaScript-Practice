@@ -86,11 +86,11 @@ function validate() {
 	}
 
 	if(stateInput !== 'None'){
-		document.getElementById('state-valid').style.display = "block";
-		document.getElementById('state-invalid').style.display = "none";
+		document.getElementById('batchno-valid').style.display = "block";
+		document.getElementById('batchno-invalid').style.display = "none";
 	} else {
-		document.getElementById('state-invalid').style.display = "block";
-		document.getElementById('state-valid').style.display = "none";
+		document.getElementById('batchno-invalid').style.display = "block";
+		document.getElementById('batchno-valid').style.display = "none";
 		error = true
 	}
 
